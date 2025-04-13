@@ -1,0 +1,41 @@
+{
+  "id": "idlock_zigbee",
+  "name": {
+    "en": "ID Lock (Zigbee)",
+    "no": "ID Lock (Zigbee)"
+  },
+  "class": "lock",
+  "capabilities": [
+    "locked",
+    "measure_battery",
+    "alarm_battery"
+  ],
+  "capabilitiesOptions": {
+    "locked": {
+      "title": {
+        "en": "Door Lock",
+        "no": "Dørlås"
+      }
+    }
+  },
+  "zigbee": {
+    "manufacturerName": "Datek", 
+    "modelId": [
+      "ID Lock 150", 
+      "ID Lock 202"
+    ], 
+    "productId": [
+      "ID Lock 150", 
+      "ID Lock 202"
+    ],
+    "deviceId": 10,
+    "profileId": 260,
+    "learnmode": {
+      "image": "",
+      "instruction": {
+        "en": "Follow the lock's manual to put it in Zigbee pairing mode (usually involves entering Master PIN + a sequence like * X * Y).",
+        "no": "Følg låsens manual for å sette den i Zigbee paringsmodus (involverer vanligvis Master PIN + en sekvens som * X * Y)."
+      }
+    }
+  }
+}

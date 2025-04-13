@@ -1,0 +1,80 @@
+{
+  "id": "com.arnberge.idlockzigbee",
+  "version": "0.1.0",
+  "compatibility": ">=10.0.0",
+  "sdk": 3,
+  "name": {
+    "en": "ID Lock Zigbee (Arne)",
+    "no": "ID Lock Zigbee (Arne)"
+  },
+  "description": {
+    "en": "Adds support for ID Lock devices with the Datek Zigbee module.",
+    "no": "Legger til støtte for ID Lock-enheter med Datek Zigbee-modulen."
+  },
+  "category": "security",
+  "permissions": [
+    "homey:manager:api",
+    "homey:wireless:zigbee"
+  ],
+  "icons": {
+    "small": "/assets/icon.svg",
+    "large": "/assets/large.jpg"
+  },
+  "author": {
+    "name": "Arne Berge",
+    "email": "arne@live.no"
+  },
+  "drivers": [
+    {
+      "id": "idlock_zigbee",
+      "name": {
+        "en": "ID Lock (Zigbee)",
+        "no": "ID Lock (Zigbee)"
+      },
+      "class": "lock",
+      "capabilities": [
+        "locked",
+        "measure_battery",
+        "alarm_battery"
+      ],
+      "zigbee": {
+        "manufacturerName": "Datek",
+        "modelId": [
+          "ID Lock 150",
+          "ID Lock 202"
+        ],
+        "productId": [
+          "ID Lock 150", 
+          "ID Lock 202"
+        ],
+        "deviceId": 10,
+        "profileId": 260,
+        "learnmode": {
+          "image": "",
+          "instruction": {
+            "en": "Follow the lock's manual to put it in Zigbee pairing mode (usually involves entering Master PIN + a sequence like * X * Y).",
+            "no": "Følg låsens manual for å sette den i Zigbee paringsmodus (involverer vanligvis Master PIN + en sekvens som * X * Y)."
+          }
+        },
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              1,
+              3,
+              257
+            ],
+            "bindings": [
+              1,
+              257
+            ]
+          }
+        }
+      },
+      "images": {
+        "large": "/drivers/idlock_zigbee/assets/large.jpg",
+        "small": "/drivers/idlock_zigbee/assets/small.svg"
+      }
+    }
+  ]
+}
